@@ -1,0 +1,597 @@
+/* ==========================================================================
+   1. CORE VARIABLES & MASTER ROOT SETUP (DARK MODE STANDARD DEFAULT)
+   ========================================================================== */
+:root {
+    --bg-main: #0d0d11;
+    --bg-surface: #16161a;
+    --bg-card: #1f1f25;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b9;
+    --gold: #d4af37;
+    --gold-light: #f3e5ab;
+    --gold-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   2. LIGHT MODE OVERRIDES
+   ========================================================================== */
+body.light-mode {
+    --bg-main: #f4f5f7;
+    --bg-surface: #ffffff;
+    --bg-card: #f9fafb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   3. RESET LAYERS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.gold-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+}
+
+/* ==========================================================================
+   4. NAVIGATION STYLINGS
+   ========================================================================== */
+header {
+    background-color: var(--bg-surface);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 5%;
+}
+
+.nav-right-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+body.light-mode .nav-logo {
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* THEME CONTROL TRIGGERS */
+#theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--gold);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background: var(--gold);
+    color: #000;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-primary);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   5. HERO ARCHITECTURE
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, var(--bg-card) 0%, var(--bg-main) 100%);
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: var(--text-secondary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    margin: 10px;
+}
+
+.primary-btn {
+    background: var(--gold-gradient);
+    color: #000;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.secondary-btn {
+    border: 2px solid var(--gold);
+    color: var(--text-primary);
+}
+
+.secondary-btn:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+/* ==========================================================================
+   6. ABOUT SECTION
+   ========================================================================== */
+.about-section {
+    background-color: var(--bg-surface);
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.stat-item {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-item h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   7. PRICING ARCHITECTURE
+   ========================================================================== */
+.services-section {
+    background-color: var(--bg-main);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.price-card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+}
+
+.price-card.featured {
+    border: 2px solid var(--gold);
+    transform: scale(1.03);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold-gradient);
+    color: #000;
+    padding: 5px 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.price-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.price-card ul li {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.price-card ul li i {
+    color: var(--gold);
+    margin-right: 10px;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+body.light-mode .card-btn {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.card-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-surface);
+}
+
+.static-gold {
+    background: var(--gold-gradient) !important;
+    color: #000 !important;
+}
+
+.maintenance-box {
+    margin-top: 50px;
+    background: var(--bg-surface);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--gold);
+    border: 1px solid var(--border-color);
+    border-left-width: 4px;
+}
+
+.m-info h4 { font-size: 1.2rem; margin-bottom: 5px; }
+.m-info p { color: var(--text-secondary); }
+.m-price { font-size: 1.8rem; font-weight: 700; color: var(--gold); }
+.m-price span { font-size: 1rem; color: var(--text-secondary); }
+
+/* ==========================================================================
+   8. PORTFOLIO CARDS
+   ========================================================================== */
+.projects-section {
+    background-color: var(--bg-surface);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--bg-card);
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    background: var(--bg-surface);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.project-icon {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.project-card h3 { margin-bottom: 12px; font-size: 1.3rem; }
+.project-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 25px; }
+
+.project-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   9. INTERACTIVE CONTACT FORM SYSTEM
+   ========================================================================== */
+.contact-section {
+    background-color: var(--bg-main);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.contact-details-box h3, .contact-form-box h3, .legal-footer-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.contact-details-box p { color: var(--text-secondary); margin-bottom: 30px; }
+.contact-info-list { display: flex; flex-direction: column; gap: 20px; }
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-surface);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.info-card i { font-size: 1.5rem; color: var(--gold); width: 30px; text-align: center; }
+.info-card div span { display: block; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; }
+.info-card div a { color: var(--text-primary); text-decoration: none; font-weight: 600; }
+
+.contact-form-box {
+    background: var(--bg-surface);
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.interactive-form { display: flex; flex-direction: column; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label { font-size: 0.9rem; color: var(--text-secondary); }
+
+.form-group input, .form-group select, .form-group textarea {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-family: var(--font-stack);
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--gold);
+}
+
+.submit-form-btn {
+    background: var(--gold-gradient);
+    color: #000;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   10. TERMS CONFIGURATION
+   ========================================================================== */
+.legal-footer-box {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-left-width: 4px;
+    border-left-color: var(--gold);
+}
+
+.terms-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.terms-grid-layout p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-grid-layout p i { color: var(--gold); font-size: 0.8rem; }
+
+footer {
+    background: var(--bg-surface);
+    text-align: center;
+    padding: 30px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+footer strong { color: var(--gold); }
+
+/* ==========================================================================
+   11. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+    .pricing-grid { grid-template-columns: 1fr; gap: 40px; }
+    .price-card.featured { transform: scale(1); }
+    .contact-layout { grid-template-columns: 1fr; }
+    .terms-grid-layout { grid-template-columns: 1fr; }
+    .maintenance-box { flex-direction: column; text-align: center; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 70px;
+        background-color: var(--bg-surface);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        border-top: 1px solid var(--border-color);
+    }
+    .nav-links li { margin: 30px 0; }
+    .menu-toggle { display: block; }
+    .nav-links.active { transform: translateX(0%); }
+    
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content h2 { font-size: 1.4rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gkaiweb | AI Web Developer & Designer Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-area">
+                <img src="IMG_20260531_140322.png" alt="Gkaiweb Logo" class="nav-logo">
+            </div>
+            <div class="nav-right-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <button id="theme-toggle" aria-label="Toggle Theme Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="gold-text">Gopal Krishan</span></h1>
+            <h2>AI Web Developer & Designer</h2>
+            <p>Design • Develop • Grow. Engineering next-generation, high-performance web experiences for brands that want to dominate the digital space.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="https://wa.me/919798021266" target="_blank" class="btn secondary-btn"><i class="fab fa-whatsapp"></i> Let's Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About <span class="gold-text">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I create modern, responsive, and visually engaging websites for businesses and brands. My portfolio features premium custom-tailored industry apps including fine dining restaurants, dynamic salons, and spice brand platforms.</p>
+                    <p>Focused entirely on clean interface designs, silky smooth user experience transitions, and incredibly fast turnaround deployment times.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item"><h3>Fast</h3><p>Delivery</p></div>
+                        <div class="stat-item"><h3>Modern</h3><p>UI/UX Design</p></div>
+                        <div class="stat-item"><h3>Responsive</h3><p>All Screen Layouts</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">My <span class="gold-text">Services & Packages</span></h2>
+            <p class="section-subtitle">Premium web capabilities tailored strictly to your target business goals.</p>
+            
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Basic Website</h3>
+                    <div class="price">₹4,999</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Premium One-Page Website</li>
+                        <li><i class="fas fa-check"></i> Mobile Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Services, Gallery, Reviews</li>
+                        <li><i class="fas fa-check"></i> WhatsApp & Call Button</li>
+                        <li><i class="fas fa-check"></i> Google Maps Integration</li>
+                        <li><i class="fas fa-check"></i> Basic SEO + SSL Setup</li>
+                        <li><i class="fas fa-check"></i> 1 Month Support</li>
+                    </ul>
+                    <a href="https://wa.me/919798021266?text=Hi%20Gopal,%20I%20am%20interested%20in%20the%20Basic%20Website%20Package" target="_blank" class="card-btn">Choose Plan</a>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="badge">Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price">₹11,999</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Up to 5 Pages</li>
+                        <li><i class="fas fa-check"></i> Premium Design</li>
+                        <li><i class="fas fa-check"></i> Booking Form</li>
+                        <li><i class="fas fa-check"></i> Gallery & Reviews</li>
+                        <li><i class="fas fa-check"></i> Social Media Integration</li>
+                        <li><i class="fas fa-check"></i> Basic SEO + SSL Setup</li>
+                        <li><i class="fas fa-check"></i> 3 Months Support</li>
+                    </ul>
+                    <a href="https://wa.me/919798021266?text=Hi%20Gopal,%20I%20am%20interested%20in%20the%20Professional%20Website%20Package" target="_blank" class="card-btn static-gold">Choose Plan</a>
+                </div>
+
+                <div class="price-card">
+                    <h3>Enterprise / Custom</h3>
+                    <div class="price">₹20,000+</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Custom Features</li>
+                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                        <li><i class="fas fa-check"></i> Premium UI/UX</li>
+                        <li><i class="fas fa-check"></i> Admin Panel (if required)</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> 6 Months Support</li>
+                    </ul>
+                    <a href="https://wa.me/919798021266?text=Hi%20Gopal,%20I%20am%20interested%20in%20the%20Enterprise%20Website%20Package" target="_blank" class="card-btn">Get A Quote</a>
+                </div>
+            </div>
+
+            <div class="maintenance-box">
+                <div class="m-info">
+                    <h4>Website Maintenance Plan</h4>
+                    <p>Bug fixes, technical support, content updates, image updates, and performance monitoring.</p>
+                </div>
+                <div class="m-price">₹2,999<span>/month</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Live <span class="gold-text">Demo Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-cut"></i></div>
+                    <h3>Elite Grooming Hub</h3>
+                    <p>A sleek, premium web environment engineered specifically for modern luxury salons and men's styling lounges.</p>
+                    <a href="https://elite-grooming-hub-3.preview.emergentagent.com/?utm_source=share" target="_blank" class="project-link">Launch Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Luxury Grooming Hub</h3>
+                    <p>Highly aesthetic business presentation and layout built focused around premium customer scheduling conversions.</p>
+                    <a href="https://luxury-grooming-hub-12.preview.emergentagent.com/?utm_source=share" target="_blank" class="project-link">Launch Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Aroma Traditions</h3>
+                    <p>An elegant, high-impact product catalog showcase built for an authentic spice and condiment brand lineup.</p>
+                    <a href="https://aroma-traditions.preview.emergentagent.com/" target="_blank" class="project-link">Launch Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Mehfil Dine</h3>
+                    <p>Vibrant, menu-driven digital environment tailored for interactive customer interactions and luxury fine dining.</p>
+                    <a href="https://mehfil-dine.preview.emergentagent.com/?utm_source=share" target="_blank" class="project-link">Launch Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-store"></i></div>
+                    <h3>Raj Restaurant Website</h3>
+                    <p>A seamless, modern food service business infrastructure featuring visual navigation optimized for mobile display screens.</p>
+                    <a href="https://share.google/MQbdyTXfzFYYNhsIB" target="_blank" class="project-link">Launch Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Build Something <span class="gold-text">Great</span></h2>
+            <p class="section-subtitle">Get in touch today for quotes, project bookings, or custom business inquiries.</p>
+            
+            <div class="contact-layout">
+                <div class="contact-details-box">
+                    <h3>Contact Information</h3>
+                    <p>Have an upcoming concept or system integration requirement? Contact me directly via any of the communication paths listed below.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="info-card">
+                            <i class="fas fa-envelope"></i>
+                            <div><span>Email Me</span><a href="mailto:gkaiweb.in@gmail.co">gkaiweb.in@gmail.co</a></div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <div><span>WhatsApp Business</span><a href="https://wa.me/919798021266" target="_blank">+91 97980 21266</a></div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <div><span>Alternative Line</span><a href="tel:+918709800420">+91 87098 00420</a></div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fab fa-instagram"></i>
+                            <div><span>Instagram</span><a href="https://instagram.com/gkaiweb.in" target="_blank">@gkaiweb.in</a></div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fab fa-github"></i>
+                            <div><span>GitHub Workspace</span><a href="https://github.com/Gkaiweb" target="_blank">github.com/Gkaiweb</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <h3>Send A Message</h3>
+                    <form class="interactive-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="example@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="package">Select Interested Package</label>
+                            <select id="package">
+                                <option value="basic">Basic Website Plan — ₹4,999</option>
+                                <option value="professional" selected>Professional Website Plan — ₹11,999</option>
+                                <option value="enterprise">Enterprise Custom Plan — ₹20,000+</option>
+                                <option value="maintenance">Maintenance Setup Plan — ₹2,999/mo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Requirements Details</label>
+                            <textarea id="message" rows="5" placeholder="Describe your brand goals, scope requirements, or feature list..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-form-btn">Send Proposal Request <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="legal-footer-box">
+                <h3><i class="fas fa-file-contract"></i> Project Terms & Conditions</h3>
+                <div class="terms-grid-layout">
+                    <p><i class="fas fa-shield-alt"></i> 50% advance payment required before project start.</p>
+                    <p><i class="fas fa-shield-alt"></i> Remaining payment before final delivery.</p>
+                    <p><i class="fas fa-shield-alt"></i> Domain & hosting charges are separate.</p>
+                    <p><i class="fas fa-shield-alt"></i> Annual renewal charges apply separately.</p>
+                    <p><i class="fas fa-shield-alt"></i> Client provides content, images and logo.</p>
+                    <p><i class="fas fa-shield-alt"></i> Delivery timeline depends on project scope.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gkaiweb. Developed by <strong>Gopal Krishan</strong>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
