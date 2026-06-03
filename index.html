@@ -206,6 +206,77 @@
                 <div class="contact-form-box">
                     <h3>Send A Message</h3>
                     <form class="interactive-form"
+action="https://api.web3forms.com/submit"
+method="POST">
+
+<input type="hidden"
+name="access_key"
+value="25e25735-f11b-46dd-9c67-aa94f009b055">
+
+<input type="hidden"
+name="subject"
+value="New Portfolio Contact">
+
+<div class="form-group">
+<label>Your Name</label>
+<input type="text"
+name="name"
+placeholder="John Doe"
+required>
+</div>
+
+<div class="form-group">
+<label>Email Address</label>
+<input type="email"
+name="email"
+placeholder="example@gmail.com"
+required>
+</div>
+
+<div class="form-group">
+<label>Select Package</label>
+
+<select name="package">
+
+<option value="basic">Basic Website</option>
+
+<option value="professional">
+Professional Website
+</option>
+
+<option value="enterprise">
+Enterprise Website
+</option>
+
+<option value="maintenance">
+Maintenance Plan
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Message</label>
+
+<textarea
+name="message"
+rows="5"
+required></textarea>
+
+</div>
+
+<button
+type="submit"
+class="submit-form-btn">
+
+Send Proposal Request
+
+</button>
+
+</form>
+                    <!-- <form class="interactive-form"
       action="https://api.web3forms.com/submit"
       method="POST">
 
@@ -237,7 +308,7 @@
                             <textarea id="message" rows="5" placeholder="Describe your brand goals, scope requirements, or feature list..." required></textarea>
                         </div>
                         <button type="submit" class="submit-form-btn">Send Proposal Request <i class="fas fa-paper-plane"></i></button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
 
