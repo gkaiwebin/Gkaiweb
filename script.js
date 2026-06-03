@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // DARK / LIGHT MODE
     const themeToggleBtn = document.getElementById("theme-toggle");
 
-    if(themeToggleBtn){
+    if (themeToggleBtn) {
         const themeIcon = themeToggleBtn.querySelector("i");
 
         themeToggleBtn.addEventListener("click", () => {
             document.body.classList.toggle("light-mode");
 
-            if(document.body.classList.contains("light-mode")){
+            if (document.body.classList.contains("light-mode")) {
                 themeIcon.classList.remove("fa-moon");
                 themeIcon.classList.add("fa-sun");
             } else {
@@ -28,18 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     const navItems = document.querySelectorAll(".nav-links a");
 
-    if(mobileMenu){
+    if (mobileMenu) {
 
-        mobileMenu.addEventListener("click", ()=>{
+        mobileMenu.addEventListener("click", () => {
 
             navLinks.classList.toggle("active");
             mobileMenu.classList.toggle("is-active");
 
         });
 
-        navItems.forEach(item=>{
+        navItems.forEach(item => {
 
-            item.addEventListener("click", ()=>{
+            item.addEventListener("click", () => {
 
                 navLinks.classList.remove("active");
                 mobileMenu.classList.remove("is-active");
@@ -49,6 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+
+});
 
     // CONTACT FORM
 const contactForm = document.querySelector(".interactive-form");
