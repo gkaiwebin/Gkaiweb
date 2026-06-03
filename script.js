@@ -51,23 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // CONTACT FORM
-    const contactForm = document.querySelector(".interactive-form");
+const contactForm = document.querySelector(".interactive-form");
 
-    if(contactForm){
+if(contactForm){
 
-        contactForm.addEventListener("submit",(e)=>{
+contactForm.addEventListener("submit",()=>{
 
-            e.preventDefault();
+setTimeout(()=>{
 
-            const name =
-            document.getElementById("name").value;
+alert("Message sent successfully!");
 
-            alert(`Thank you ${name}! Your message has been sent.`);
+contactForm.reset();
 
-            contactForm.reset();
-
-        });
-
-    }
+},1000);
 
 });
+
+}
