@@ -205,7 +205,46 @@
 
                 <div class="contact-form-box">
                     <h3>Send A Message</h3>
-                    <form class="interactive-form">
+                    <form class="interactive-form"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+
+    <input type="hidden" name="subject" value="New Portfolio Contact">
+    <input type="hidden" name="redirect" value="thankyou.html">
+
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="example@domain.com" required>
+    </div>
+
+    <div class="form-group">
+        <label>Select Package</label>
+        <select name="package">
+            <option value="basic">Basic Website</option>
+            <option value="professional">Professional Website</option>
+            <option value="enterprise">Enterprise Website</option>
+            <option value="maintenance">Maintenance Plan</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-form-btn">
+        Send Message
+    </button>
+
+</form>
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" placeholder="John Doe" required>
