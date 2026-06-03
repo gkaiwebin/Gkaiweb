@@ -55,16 +55,14 @@ const contactForm = document.querySelector(".interactive-form");
 
 if(contactForm){
 
-contactForm.addEventListener("submit",()=>{
+    contactForm.addEventListener("submit", ()=>{
 
-setTimeout(()=>{
+        setTimeout(()=>{
 
-alert("Message sent successfully!");
+            alert("Message sent successfully!");
 
-contactForm.reset();
+        },1000);
 
-},1000);
-
-});
+    });
 
 }
