@@ -31,27 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (mobileMenu) {
 
         mobileMenu.addEventListener("click", () => {
-
             navLinks.classList.toggle("active");
             mobileMenu.classList.toggle("is-active");
-
         });
 
         navItems.forEach(item => {
-
             item.addEventListener("click", () => {
-
                 navLinks.classList.remove("active");
                 mobileMenu.classList.remove("is-active");
-
             });
-
         });
 
     }
 
 });
-
     // CONTACT FORM
 const contactForm = document.querySelector(".interactive-form");
 
