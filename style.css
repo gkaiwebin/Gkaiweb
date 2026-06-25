@@ -2,11 +2,12 @@
    1. CORE VARIABLES & MASTER ROOT SETUP (DARK MODE STANDARD DEFAULT)
    ========================================================================== */
 :root {
-    --bg-main: #0d0d11;
-    --bg-surface: #16161a;
-    --bg-card: #1f1f25;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b9;
+    --bg-main: #f4f5f7;
+    --bg-surface: #ffffff;
+    --bg-card: #f9fafb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --border-color: rgba(0, 0, 0, 0.08);
     --gold: #d4af37;
     --gold-light: #f3e5ab;
     --gold-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
@@ -18,13 +19,13 @@
 /* ==========================================================================
    2. LIGHT MODE OVERRIDES
    ========================================================================== */
-body.light-mode {
-    --bg-main: #f4f5f7;
-    --bg-surface: #ffffff;
-    --bg-card: #f9fafb;
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --border-color: rgba(0, 0, 0, 0.08);
+body.dark-mode {
+    --bg-main: #0d0d11;
+    --bg-surface: #16161a;
+    --bg-card: #1f1f25;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b9;
+    --border-color: rgba(255, 255, 255, 0.05);
 }
 
 /* ==========================================================================
