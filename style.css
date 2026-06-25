@@ -13,7 +13,7 @@
     --gold-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
     --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --border-color: rgba(255, 255, 255, 0.05);
+    /* --border-color: rgba(255, 255, 255, 0.05); */
 }
 
 /* ==========================================================================
