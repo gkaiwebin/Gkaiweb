@@ -12,7 +12,7 @@ if (themeToggleBtn) {
     themeIcon.classList.add("fa-sun");
 
     themeToggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+        document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
             themeIcon.classList.remove("fa-moon");
