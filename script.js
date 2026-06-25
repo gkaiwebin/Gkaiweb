@@ -2,26 +2,27 @@
  * GKAIWEB - Fixed Script
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+const themeToggleBtn = document.getElementById("theme-toggle");
 
-    // DARK / LIGHT MODE
-    const themeToggleBtn = document.getElementById("theme-toggle");
+if (themeToggleBtn) {
+    const themeIcon = themeToggleBtn.querySelector("i");
 
-    if (themeToggleBtn) {
-        const themeIcon = themeToggleBtn.querySelector("i");
+    document.body.classList.add("light-mode");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
 
-        themeToggleBtn.addEventListener("click", () => {
-            document.body.classList.toggle("light-mode");
+    themeToggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
 
-            if (document.body.classList.contains("light-mode")) {
-                themeIcon.classList.remove("fa-moon");
-                themeIcon.classList.add("fa-sun");
-            } else {
-                themeIcon.classList.remove("fa-sun");
-                themeIcon.classList.add("fa-moon");
-            }
-        });
-    }
+        if (document.body.classList.contains("light-mode")) {
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
+        } else {
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
+        }
+    });
+}
 
     // MOBILE MENU
     const mobileMenu = document.getElementById("mobile-menu");
