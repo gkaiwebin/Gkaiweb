@@ -7,7 +7,7 @@ const themeToggleBtn = document.getElementById("theme-toggle");
 if (themeToggleBtn) {
     const themeIcon = themeToggleBtn.querySelector("i");
 
-    document.body.classList.add("light-mode");
+    document.body.classList.toggle("light-mode");
     themeIcon.classList.remove("fa-moon");
     themeIcon.classList.add("fa-sun");
 
